@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADFAM Printing PLC - Professional Printing in Addis Ababa</title>
+    <meta name="description" content="Quality printing services in Megenagna, Addis Ababa. Business cards, brochures, banners, and more.">
+    <style>
+        :root {
+            --eth-green: #078930;
+            --eth-yellow: #FCDD09;
+            --eth-red: #DA121A;
+            --text-dark: #333;
+            --text-light: #666;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+        
+        .header-banner {
+            background: linear-gradient(135deg, var(--eth-green) 0%, var(--eth-yellow) 50%, var(--eth-red) 100%);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .header-banner h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header-banner p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+        
+        .language-switcher {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        
+        .lang-btn {
+            background: rgba(255,255,255,0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 8px 16px;
+            margin: 0 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .lang-btn:hover {
+            background: white;
+            color: var(--eth-green);
+        }
+        
+        .contact-bar {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px auto;
+            max-width: 800px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 5px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--eth-green);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-icon {
+            font-size: 2.5em;
+            color: var(--eth-green);
+            margin-bottom: 15px;
+        }
+        
+        .service-card h3 {
+            color: var(--eth-green);
+            margin-bottom: 10px;
+        }
+        
+        .whatsapp-btn {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            transform: scale(1.05);
+        }
+        
+        .map-placeholder {
+            background: #e9e9e9;
+            height: 300px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+            color: var(--text-light);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            border-top: 2px solid #eee;
+            color: var(--text-light);
+        }
+        
+        @media (max-width: 768px) {
+            .header-banner h1 {
+                font-size: 2em;
+            }
+            
+            .contact-bar {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            .language-switcher {
+                position: relative;
+                top: 0;
+                right: 0;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+        }
+    </style>
+    <!-- Google Fonts for Amharic if needed -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="language-switcher">
+        <button class="lang-btn" onclick="switchLanguage('en')">English</button>
+        <button class="lang-btn" onclick="switchLanguage('am')">አማርኛ</button>
+    </div>
+    
+    <header class="header-banner">
+        <h1 id="company-name">ADFAM Printing PLC</h1>
+        <p id="tagline">Premium Printing Solutions in Addis Ababa</p>
+    </header>
+    
+    <div class="contact-bar">
+        <div class="contact-item">
+            📍 <strong>Location:</strong> Megenagna, Addis Ababa
+        </div>
+        <div class="contact-item">
+            📞 <strong>Phone:</strong> +251 XX XXX XXXX
+        </div>
+        <div class="contact-item">
+            ✉️ <strong>Email:</strong> info@adfamprinting.com.et
+        </div>
+    </div>
+    
+    <section>
+        <h2 style="color: var(--eth-green); margin-bottom: 20px; text-align: center;">Our Professional Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🖨️</div>
+                <h3>Business Printing</h3>
+                <p>Business cards, letterheads, envelopes, and corporate stationery with premium finishes.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">📰</div>
+                <h3>Marketing Materials</h3>
+                <p>Brochures, flyers, posters, and catalogs that make your brand stand out.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">📚</div>
+                <h3>Publication Printing</h3>
+                <p>Magazines, books, annual reports, and multi-page documents with perfect binding.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🪧</div>
+                <h3>Large Format Printing</h3>
+                <p>Banners, signage, billboards, and vehicle graphics for maximum visibility.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🎁</div>
+                <h3>Packaging Printing</h3>
+                <p>Custom boxes, labels, and packaging that enhance your product presentation.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🎫</div>
+                <h3>Event Printing</h3>
+                <p>Invitations, tickets, programs, and event materials for memorable occasions.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section style="text-align: center; margin: 40px 0;">
+        <h2 style="color: var(--eth-green); margin-bottom: 20px;">Get Instant Quote on WhatsApp</h2>
+        <p style="margin-bottom: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Send us your design or requirements and get a quotation within minutes.
+        </p>
+        <a href="https://wa.me/251XXXXXXXXX?text=Hello%20ADFAM%20Printing%2C%20I%20need%20a%20quote%20for..." 
+           class="whatsapp-btn" target="_blank">
+            💬 Chat on WhatsApp
+        </a>
+    </section>
+    
+    <section>
+        <h2 style="color: var(--eth-green); margin-bottom: 20px;">Find Us in Megenagna</h2>
+        <div class="map-placeholder">
+            📍 Google Maps Embed - Add your location link here
+        </div>
+        <p style="text-align: center;">
+            <strong>Visit Our Showroom:</strong> Open Monday-Saturday, 8:30 AM - 6:30 PM
+        </p>
+    </section>
+    
+    <footer>
+        <p>© <span id="current-year">2025</span> ADFAM Printing PLC. All rights reserved.</p>
+        <p style="margin-top: 10px; font-size: 0.9em;">
+            Your trusted printing partner in Addis Ababa | VAT Reg. No: 012700 | TIN: 0000030603
+        </p>
+    </footer>
+    
+    <script>
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Language switching function
+        function switchLanguage(lang) {
+            const translations = {
+                en: {
+                    companyName: "ADFAM Printing PLC",
+                    tagline: "Premium Printing Solutions in Addis Ababa",
+                    servicesTitle: "Our Professional Services",
+                    service1: "Business Printing",
+                    service1Desc: "Business cards, letterheads, envelopes, and corporate stationery with premium finishes.",
+                    service2: "Marketing Materials",
+                    service2Desc: "Brochures, flyers, posters, and catalogs that make your brand stand out.",
+                    service3: "Publication Printing",
+                    service3Desc: "Magazines, books, annual reports, and multi-page documents with perfect binding.",
+                    service4: "Large Format Printing",
+                    service4Desc: "Banners, signage, billboards, and vehicle graphics for maximum visibility.",
+                    service5: "Packaging Printing",
+                    service5Desc: "Custom boxes, labels, and packaging that enhance your product presentation.",
+                    service6: "Event Printing",
+                    service6Desc: "Invitations, tickets, programs, and event materials for memorable occasions.",
+                    whatsappTitle: "Get Instant Quote on WhatsApp",
+                    whatsappDesc: "Send us your design or requirements and get a quotation within minutes.",
+                    locationTitle: "Find Us in Megenagna",
+                    visitText: "Visit Our Showroom: Open Monday-Saturday, 8:30 AM - 6:30 PM",
+                    footerText: "Your trusted printing partner in Addis Ababa"
+                },
+                am: {
+                    companyName: "አድፋም ማተሚያ ኃላፊነቱ የተገደበ የህትመት ኩባንያ",
+                    tagline: "በአዲስ አበባ ከፍተኛ የማተሚያ አገልግሎቶች",
+                    servicesTitle: "የምናቀርባቸው ፕሮፌሽናል አገልግሎቶች",
+                    service1: "የንግድ ማተሚያ",
+                    service1Desc: "የንግድ ካርዶች፣ የደብዳቤ ገጾች፣ ፕላስቲክ እና የድርጅት ወረቀቶች ከፍተኛ ጥራት ጋር።",
+                    service2: "የግብይት ቁሳቁሶች",
+                    service2Desc: "ብሮሹሮች፣ ፍላየሮች፣ ፖስተሮች እና ካታሎጎች ንግድ ስምዎን ለማስተዋወቅ።",
+                    service3: "የመጽሃፍ ማተሚያ",
+                    service3Desc: "መጽሔቶች፣ መጽሃፍት፣ ዓመታዊ ሪፖርቶች እና ባለብዙ ገጾች ሰነዶች።",
+                    service4: "ትልቅ ፎርማት ማተሚያ",
+                    service4Desc: "ባነሮች፣ ምልክቶች፣ ሜጋ ባነሮች እና የተሽከርካሪ ስዕሎች።",
+                    service5: "የጥቅል ማተሚያ",
+                    service5Desc: "ብጁ ሳጥኖች፣ ምልክቶች እና ጥቅሎች ምርትዎን ለማሳየት።",
+                    service6: "የክትትል ማተሚያ",
+                    service6Desc: "ግብዣዎች፣ ቲኬቶች፣ ፕሮግራሞች እና የክትትል ቁሳቁሶች።",
+                    whatsappTitle: "በ WhatsApp ፈጣን ዋጋ ያግኙ",
+                    whatsappDesc: "ዲዛይንዎን ወይም መስፈርቶችዎን ይላኩልን እና በሰአታት ውስጥ ዋጋ ያግኙ።",
+                    locationTitle: "በመገናኛ ያግኙን",
+                    visitText: "የእይታ ክፍላችንን ይጎብኙ፡ ሰኞ-ቅዳሜ፣ 8፡30 ጥዋት - 6፡30 ማታ",
+                    footerText: "በአዲስ አበባ የሚገኝ አስተማማኝ የማተሚያ አጋሮችዎ"
+                }
+            };
+            
+            if (translations[lang]) {
+                const t = translations[lang];
+                document.getElementById('company-name').textContent = t.companyName;
+                document.getElementById('tagline').textContent = t.tagline;
+                
+                // Update other elements if they have IDs
+                const elements = document.querySelectorAll('[data-translate]');
+                elements.forEach(el => {
+                    const key = el.getAttribute('data-translate');
+                    if (t[key]) {
+                        el.textContent = t[key];
+                    }
+                });
+                
+                // Store language preference
+                localStorage.setItem('preferred-language', lang);
+            }
+        }
+        
+        // Load preferred language on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const preferredLang = localStorage.getItem('preferred-language') || 'en';
+            switchLanguage(preferredLang);
+        });
+    </script>
+</body>
+</html>
