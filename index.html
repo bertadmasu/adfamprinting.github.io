@@ -135,16 +135,23 @@
             cursor: pointer;
         }
 
-      /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.9) 0%, rgba(15, 118, 110, 0.9) 100%), url('https://6953abb7934f3f92381f313b.imgix.net/video_2025-12-30_11-26-37.mp4');
-            background-size: cover;
-            background-position: center;
-            color: var(--white);
-            padding: 6rem 0;
-            text-align: center;
-            border-radius: 0 0 30px 30px;
-            margin-bottom: 4rem;
+     <!-- Hero Section with Video Background -->
+<section class="hero" id="home">
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+            <source src="https://6953abb7934f3f92381f313b.imgix.net/video_2025-12-30_11-26-37.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+    
+    <div class="container">
+        <h1 class="fade-in">Adfam Printing P.L.C</h1>
+        <p class="fade-in">Professional commercial printing services in Addis Ababa, Ethiopia. Delivering quality prints for businesses, government, and individuals since 2008 EC.</p>
+        <a href="#contact" class="cta-button fade-in">Get a Quote Today</a>
+    </div>
+</section>
         }
 
         .hero h1 {
