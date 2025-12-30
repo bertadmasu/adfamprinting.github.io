@@ -135,50 +135,17 @@
             cursor: pointer;
         }
 
-             <!-- Hero Section with Video Background -->
-             <section class="hero" id="home">
-             <!-- Video Background -->
-             <div class="video-background">
-             <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
-                <source src="https://6953abb7934f3f92381f313b.imgix.net/video_2025-12-30_11-26-37.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="video-overlay"></div>
-           </div>
-    
-            <div class="container">
-                <h1 class="fade-in">Adfam Printing P.L.C</h1>
-                <p class="fade-in">Professional commercial printing services in Addis Ababa, Ethiopia. Delivering quality prints for businesses, government, and individuals since 2008 EC.</p>
-                <a href="#contact" class="cta-button fade-in">Get a Quote Today</a>
-            </div>
-        </section>
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.9) 0%, rgba(15, 118, 110, 0.9) 100%), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 6rem 0;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 4rem;
         }
-         <!-- Hero Section with Video -->
-         <section class="hero" id="home">
-         <!-- Video Background Container -->
-         <div class="video-background loading">
-          <video 
-            autoplay 
-            muted 
-            loop 
-            playsinline 
-            preload="metadata"
-            poster="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-            onloadeddata="this.parentElement.classList.remove('loading')"
-          >
-            <source src="https://6953abb7934f3f92381f313b.imgix.net/video_2025-12-30_11-26-37.mp4" type="video/mp4">
-            <!-- Fallback image if video doesn't load -->
-            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Printing background">
-        </video>
-        <div class="video-overlay"></div>
-    </div>
-    
-    <div class="container">
-        <h1 class="fade-in">Adfam Printing P.L.C</h1>
-        <p class="fade-in">Professional commercial printing services in Addis Ababa, Ethiopia. Delivering quality prints for businesses, government, and individuals since 2008 EC.</p>
-        <a href="#contact" class="cta-button fade-in">Get a Quote Today</a>
-    </div>
-</section>
 
         .hero h1 {
             font-family: 'Poppins', sans-serif;
@@ -665,7 +632,7 @@
     <section class="hero" id="home">
         <div class="container">
             <h1 class="fade-in">Adfam Printing P.L.C</h1>
-            <p class="fade-in">Professional commercial printing services in Addis Ababa, Ethiopia. Delivering quality prints for businesses, government, and individuals since 2008 EC.</p>
+            <p class="fade-in">Professional commercial printing services in Addis Ababa, Ethiopia. Delivering quality prints for businesses, government, and individuals since our establishment.</p>
             <a href="#contact" class="cta-button fade-in">Get a Quote Today</a>
         </div>
     </section>
@@ -681,7 +648,7 @@
             <div class="about-content">
                 <div class="about-text fade-in">
                     <h3>Your Trusted Printing Partner in Addis Ababa</h3>
-                    <p>Adfam Printing P.L.C is a commercial printing company based in Megenagna, Addis Ababa. We specialize in providing high-quality printing services for businesses, government agencies, and individuals across Ethiopia.</p>
+                    <p>Adfam Printing P.L.C is a leading commercial printing company based in Megenagna, Addis Ababa. We specialize in providing high-quality printing services for businesses, government agencies, and individuals across Ethiopia.</p>
                     <p>With state-of-the-art equipment and a team of experienced professionals, we deliver exceptional results that meet the highest standards of quality and precision.</p>
                     
                     <div class="company-details fade-in">
@@ -706,14 +673,14 @@
                                 <i class="fas fa-certificate"></i>
                             </div>
                             <div>
-                                <strong>Quality Standards
+                                <strong>Quality Standards:</strong> ISO-quality printing processes
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="about-image fade-in">
-                    <img src="https://6953abb7934f3f92381f313b.imgix.net/473819095_595967506502828_1614912065629517126_n.jpg">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Adfam Printing Facility">
                 </div>
             </div>
         </div>
@@ -833,7 +800,7 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Phone Number</h4>
-                                <p>+251 911 21 56 64<br>+251 929 03 41 24</p>
+                                <p>+251 XX XXX XXXX<br>+251 XX XXX XXXX</p>
                             </div>
                         </div>
                         
@@ -853,7 +820,7 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Business Hours</h4>
-                                <p>Monday - Friday: 2:30 AM - 11:30 PM<br>Saturday: 8:30 AM - 6:00 PM</p>
+                                <p>Monday - Friday: 8:30 AM - 6:30 PM<br>Saturday: 9:00 AM - 4:00 PM</p>
                             </div>
                         </div>
                     </div>
@@ -883,7 +850,7 @@
                         
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" class="form-control" placeholder="+251 911 21 56 64" required>
+                            <input type="tel" id="phone" class="form-control" placeholder="+251 XXX XXX XXX" required>
                         </div>
                         
                         <div class="form-group">
@@ -923,7 +890,7 @@
             <div class="footer-container">
                 <div class="footer-column">
                     <h4>Adfam Printing</h4>
-                    <p>Professional commercial printing services in Addis Ababa, delivering quality and reliability since our 2008 EC</p>
+                    <p>Professional commercial printing services in Addis Ababa, delivering quality and reliability since our establishment.</p>
                     <div class="social-links" style="margin-top: 1rem;">
                         <a href="#" class="social-link" aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
@@ -963,9 +930,9 @@
                     <h4>Contact Info</h4>
                     <ul class="footer-links">
                         <li><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Megenagna, Addis Ababa</li>
-                        <li><i class="fas fa-phone" style="margin-right: 8px;"></i> +251 911 21 56 64</li>
+                        <li><i class="fas fa-phone" style="margin-right: 8px;"></i> +251 XX XXX XXXX</li>
                         <li><i class="fas fa-envelope" style="margin-right: 8px;"></i> info@adfamprinting.com.et</li>
-                        <li><i class="fas fa-clock" style="margin-right: 8px;"></i> Mon-Fri: 2:30AM-11:30PM</li>
+                        <li><i class="fas fa-clock" style="margin-right: 8px;"></i> Mon-Fri: 8:30AM-6:30PM</li>
                     </ul>
                 </div>
             </div>
