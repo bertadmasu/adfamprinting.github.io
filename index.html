@@ -1062,6 +1062,16 @@
                 }
             });
         });
-    </script>
+    </script
+        <script>
+            // Force the page to the top on every refresh
+            window.onbeforeunload = function () {
+                window.scrollTo(0, 0);
+            };
+
+            if ('scrollRestoration' in history) {
+                history.scrollRestoration = 'manual';
+            }
+       </script>
 </body>
 </html>
