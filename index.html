@@ -1068,14 +1068,24 @@
         
     </script>
         <script>
-            // Force the page to the top on every refresh
-            window.onbeforeunload = function () {
-                window.scrollTo(0, 0);
-            };
+         // 1. Tell the browser NOT to remember the last scroll position
+         if ('scrollRestoration' in history) {
+         history.scrollRestoration = 'manual';
+                                             }
 
-            if ('scrollRestoration' in history) {
-                history.scrollRestoration = 'manual';
-            }
-       </script>
+         // 2. Force the window to the very top (0,0) immediately on load
+         window.scrollTo(0, 0);
+
+         // 3. Optimization: Ensure the video plays even if the browser tries to pause it
+        window.addEventListener('load', function() {
+        const video = document.querySelector('.hero-video');
+        if (video) {
+            video.play().catch(error => {
+                console.log("Autoplay was prevented, but muted attribute should bypass this.");
+                                        });
+                   }
+        window.scrollTo(0, 0);
+                                                    });
+     </script>
 </body>
 </html>
